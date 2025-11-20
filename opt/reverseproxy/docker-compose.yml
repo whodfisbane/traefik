@@ -4,7 +4,7 @@ services:
     container_name: traefik
 		restart: always
 		command:
-      - "--configfile=/etc/traefik/traefik.yml" # config file for trafik (I hate yml)
+      - "--configfile=/etc/traefik/traefik.yml" # config file for trafik
 		environment:
 		  DOCKER_API_VERSION: "1.52" # Latest version, switch to 1.46 if unstable
 		ports:
@@ -27,7 +27,7 @@ whoami:
       - "traefik.enable=true"
       - 'traefik.http.routers.whoami.rule=Host("whoami.local")'
       - "traefik.http.routers.whoami.entrypoints=web"
-		  - "traefik.http.services.whoami.loadbalancer.server.port=80"
+	  - "traefik.http.services.whoami.loadbalancer.server.port=80"
 
 searxng:
   image: searxng/searxng:latest
