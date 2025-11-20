@@ -1,0 +1,15 @@
+# Make sure to check capitalization and structure, yml is VERY case sensitive
+entryPoints:
+  web:
+    address: ":80" # Main port
+  traefik:
+    address: ":8080" # Dashboard port
+
+  api:
+    dashboard: true # Activate dashboard
+    insecure: true # Dont use in a real scenario, I set it to true due to it being a project
+
+  providers:
+    docker:
+      endpoint: "unix:///var/run/docker.sock" # Where docker is located
+      expodedByDefault: false 
