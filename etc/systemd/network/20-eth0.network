@@ -1,0 +1,7 @@
+[Match]
+Name=eth0 # Change to your network interface name
+[Network]
+Address=172.29.200.50/20 # Static IP, you can change it to whatever you want.
+Gateway=172.29.192.1 # Your gateway, if unsure, run "ip a"
+DNS=1.1.1.1 # Your DNS of choice (recommended to leave on default settings)
+DNS=8.8.8.8 # Same here
